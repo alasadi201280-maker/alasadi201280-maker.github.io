@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://quge5.com/88/tag.min.js" data-zone="280627" async data-cfasync="false"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Driftshade — Free HD & 4K Wallpapers</title>
+<meta name="description" content="Driftshade is a free wallpaper library for phones and desktops. Curated nature, dark, minimal, space and abstract wallpapers in HD and 4K, no sign-up required.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2314120F'/%3E%3Cpath d='M20 68 L40 40 L55 58 L68 42 L82 68 Z' fill='%23E3A83B'/%3E%3Ccircle cx='68' cy='30' r='9' fill='%233FA9A0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14120F;
+    --surface:#1B1814;
+    --surface-2:#221E19;
+    --text:#F3EFE7;
+    --text-muted:#A79E8E;
+    --accent:#E3A83B;
+    --accent-soft:#3A2E17;
+    --teal:#3FA9A0;
+    --teal-soft:#132524;
+    --border:#2A251E;
+    --radius:14px;
+    --maxw:1240px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Manrope',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;}
+  ::selection{background:var(--accent);color:#14120F;}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    line-height:1.08;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(20,18,15,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;max-width:var(--maxw);margin:0 auto;gap:20px;
+  }
+  .logo{
+    font-family:'Fraunces',serif;font-weight:700;font-size:22px;
+    display:flex;align-items:center;gap:9px;flex-shrink:0;
+  }
+  .logo-mark{
+    width:26px;height:26px;border-radius:7px;
+    background:linear-gradient(155deg,var(--accent),var(--teal));
+    flex-shrink:0;
+  }
+  .nav-links{display:flex;gap:28px;font-size:15px;font-weight:600;}
+  .nav-links a{color:var(--text-muted);transition:color .15s;}
+  .nav-links a:hover{color:var(--text);}
+  .search{
+    display:flex;align-items:center;gap:8px;
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:999px;padding:9px 16px;flex:1;max-width:340px;
+  }
+  .search input{
+    background:none;border:none;color:var(--text);font-family:inherit;
+    font-size:14px;width:100%;outline:none;
+  }
+  .search input::placeholder{color:var(--text-muted);}
+  .search svg{flex-shrink:0;opacity:.6;}
+  .nav-right{display:flex;align-items:center;gap:16px;}
+  .icon-btn{
+    width:38px;height:38px;border-radius:10px;background:var(--surface);
+    border:1px solid var(--border);display:flex;align-items:center;justify-content:center;
+    color:var(--text-muted);transition:.15s;flex-shrink:0;
+  }
+  .icon-btn:hover{color:var(--text);border-color:var(--accent);}
+  .menu-toggle{display:none;}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:64px 0 40px;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;
+  }
+  .eyebrow-line{
+    display:flex;align-items:center;gap:10px;margin-bottom:20px;color:var(--text-muted);
+    font-size:14px;font-weight:600;
+  }
+  .eyebrow-line .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);}
+  .hero h1{font-size:clamp(38px,5vw,58px);}
+  .hero h1 em{
+    font-style:italic;color:var(--accent);font-weight:500;
+  }
+  .hero p{
+    color:var(--text-muted);font-size:17px;line-height:1.65;
+    max-width:480px;margin:22px 0 30px;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .btn-primary{
+    background:var(--accent);color:#1A1305;font-weight:700;font-size:15px;
+    padding:14px 26px;border-radius:10px;border:none;transition:transform .15s, background .15s;
+  }
+  .btn-primary:hover{background:#efb95c;transform:translateY(-1px);}
+  .btn-ghost{
+    background:none;color:var(--text);font-weight:600;font-size:15px;
+    padding:14px 22px;border-radius:10px;border:1px solid var(--border);transition:.15s;
+  }
+  .btn-ghost:hover{border-color:var(--text-muted);}
+  .hero-stats{display:flex;gap:32px;margin-top:40px;}
+  .hero-stats div{border-left:2px solid var(--border);padding-left:14px;}
+  .hero-stats .num{font-family:'Fraunces',serif;font-size:24px;font-weight:600;display:block;}
+  .hero-stats .lbl{color:var(--text-muted);font-size:13px;}
+
+  .collage{position:relative;height:440px;}
+  .collage img{
+    position:absolute;object-fit:cover;border-radius:16px;
+    box-shadow:0 18px 40px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.06);
+  }
+  .collage .c1{width:56%;height:340px;top:0;left:2%;transform:rotate(-4deg);z-index:2;}
+  .collage .c2{width:48%;height:260px;bottom:0;right:0;transform:rotate(3deg);z-index:3;}
+  .collage .c3{width:34%;height:190px;top:18%;right:6%;transform:rotate(8deg);z-index:1;opacity:.9;}
+  .collage-badge{
+    position:absolute;bottom:26px;left:8%;z-index:4;
+    background:var(--teal);color:#0C1A19;font-weight:700;font-size:13px;
+    padding:10px 16px;border-radius:10px;display:flex;align-items:center;gap:8px;
+    box-shadow:0 10px 24px rgba(0,0,0,.4);
+  }
+
+  /* ---------- Category rail ---------- */
+  .cat-rail{
+    position:sticky;top:69px;z-index:40;background:var(--bg);
+    border-bottom:1px solid var(--border);padding:16px 0;
+  }
+  .cat-scroll{
+    display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding:0 2px;
+  }
+  .cat-scroll::-webkit-scrollbar{display:none;}
+  .chip{
+    flex-shrink:0;padding:9px 18px;border-radius:999px;border:1px solid var(--border);
+    font-size:14px;font-weight:600;color:var(--text-muted);background:var(--surface);
+    transition:.15s;white-space:nowrap;
+  }
+  .chip:hover{color:var(--text);}
+  .chip.active{background:var(--accent);color:#1A1305;border-color:var(--accent);}
+
+  /* ---------- Gallery ---------- */
+  .gallery-section{padding:52px 0 30px;}
+  .section-head{
+    display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:26px;gap:20px;
+  }
+  .section-head h2{font-size:28px;}
+  .section-head p{color:var(--text-muted);font-size:14px;margin:6px 0 0;}
+  .result-count{color:var(--text-muted);font-size:14px;}
+
+  .grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  }
+  .card{
+    position:relative;border-radius:var(--radius);overflow:hidden;background:var(--surface);
+    border:1px solid var(--border);cursor:pointer;
+  }
+  .card .thumb-wrap{position:relative;overflow:hidden;aspect-ratio:3/4;}
+  .card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .card:hover img{transform:scale(1.06);}
+  .card .overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(20,18,15,0) 45%,rgba(15,13,10,.88) 100%);
+    opacity:0;transition:opacity .2s;
+    display:flex;flex-direction:column;justify-content:flex-end;padding:14px;
+  }
+  .card:hover .overlay{opacity:1;}
+  .card-title{font-size:14px;font-weight:700;margin-bottom:2px;}
+  .card-meta{font-size:12px;color:#C9C1B2;display:flex;justify-content:space-between;align-items:center;}
+  .res-badge{
+    position:absolute;top:10px;left:10px;background:rgba(14,12,9,.72);backdrop-filter:blur(4px);
+    color:var(--text);font-size:11px;font-weight:700;padding:5px 9px;border-radius:6px;
+  }
+  .fav-btn{
+    position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:8px;
+    background:rgba(14,12,9,.6);backdrop-filter:blur(4px);border:none;
+    display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s;
+  }
+  .fav-btn:hover{background:rgba(14,12,9,.9);}
+  .fav-btn.active svg{fill:var(--accent);stroke:var(--accent);}
+  .dl-mini{
+    width:30px;height:30px;border-radius:7px;background:var(--accent);color:#1A1305;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+
+  .load-more-wrap{display:flex;justify-content:center;margin:44px 0 10px;}
+  .btn-load{
+    background:var(--surface);border:1px solid var(--border);color:var(--text);
+    padding:13px 30px;border-radius:10px;font-weight:700;font-size:14px;transition:.15s;
+  }
+  .btn-load:hover{border-color:var(--accent);color:var(--accent);}
+  .empty-state{
+    text-align:center;padding:70px 20px;color:var(--text-muted);display:none;
+  }
+  .empty-state.show{display:block;}
+  .empty-state h3{color:var(--text);margin-bottom:8px;font-size:20px;}
+
+  /* ---------- Features ---------- */
+  .features{padding:70px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:40px;}
+  .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+  .feature-icon{
+    width:44px;height:44px;border-radius:10px;background:var(--teal-soft);
+    display:flex;align-items:center;justify-content:center;color:var(--teal);margin-bottom:16px;
+  }
+  .feature h3{font-size:17px;font-weight:700;font-family:'Manrope',sans-serif;margin-bottom:8px;}
+  .feature p{color:var(--text-muted);font-size:14px;line-height:1.6;margin:0;}
+
+  /* ---------- CTA ---------- */
+  .cta-band{
+    margin:70px 0;padding:56px;border-radius:20px;
+    background:linear-gradient(120deg,var(--accent-soft),var(--surface) 60%);
+    border:1px solid var(--border);
+    display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;
+  }
+  .cta-band h2{font-size:30px;max-width:420px;}
+  .cta-band p{color:var(--text-muted);margin:12px 0 0;max-width:420px;font-size:15px;}
+
+  /* ---------- Footer ---------- */
+  footer{padding:56px 0 30px;}
+  .footer-grid{
+    display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding-bottom:40px;border-bottom:1px solid var(--border);
+  }
+  .footer-brand p{color:var(--text-muted);font-size:14px;line-height:1.6;margin:14px 0 18px;max-width:280px;}
+  .social-row{display:flex;gap:10px;}
+  .footer-col h4{font-size:14px;margin-bottom:14px;}
+  .footer-col a{
+    display:block;color:var(--text-muted);font-size:14px;padding:6px 0;transition:.15s;
+  }
+  .footer-col a:hover{color:var(--text);}
+  .footer-bottom{
+    display:flex;justify-content:space-between;padding-top:22px;color:var(--text-muted);font-size:13px;flex-wrap:wrap;gap:10px;
+  }
+
+  /* ---------- Lightbox ---------- */
+  .lightbox{
+    position:fixed;inset:0;background:rgba(10,9,7,.92);backdrop-filter:blur(6px);
+    z-index:100;display:none;align-items:center;justify-content:center;padding:26px;
+  }
+  .lightbox.show{display:flex;}
+  .lb-inner{max-width:900px;width:100%;max-height:88vh;display:flex;flex-direction:column;align-items:center;}
+  .lb-img-wrap{position:relative;max-height:70vh;width:auto;}
+  .lb-inner img{max-height:70vh;border-radius:12px;box-shadow:0 30px 60px rgba(0,0,0,.5);}
+  .lb-bar{
+    display:flex;justify-content:space-between;align-items:center;width:100%;margin-top:18px;gap:20px;flex-wrap:wrap;
+  }
+  .lb-info h3{font-size:18px;margin-bottom:4px;font-family:'Manrope',sans-serif;font-weight:700;}
+  .lb-info span{color:var(--text-muted);font-size:13px;}
+  .lb-actions{display:flex;gap:10px;}
+  .lb-close, .lb-nav{
+    position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+    color:#fff;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  }
+  .lb-close{top:-56px;right:0;}
+  .lb-nav.prev{left:-56px;top:50%;transform:translateY(-50%);}
+  .lb-nav.next{right:-56px;top:50%;transform:translateY(-50%);}
+
+  @media (max-width:1080px){
+    .grid{grid-template-columns:repeat(3,1fr);}
+    .features-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .lb-nav{display:none;}
+  }
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .collage{height:300px;margin-top:10px;}
+    .nav-links{display:none;}
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+    .search{display:none;}
+    .hero{padding:36px 0 24px;}
+    .hero-stats{gap:20px;}
+    .cta-band{padding:34px 22px;flex-direction:column;align-items:flex-start;}
+    .features-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;gap:26px;}
+    .lb-close{top:-50px;right:0;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .card img, .btn-primary{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="logo"><span class="logo-mark"></span>Driftshade</a>
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="searchInput" type="text" placeholder="Search wallpapers, moods, colors…">
+    </div>
+    <nav class="nav-links">
+      <a href="#gallery">Explore</a>
+      <a href="#gallery">Categories</a>
+      <a href="#features">Why Driftshade</a>
+    </nav>
+    <div class="nav-right">
+      <button class="icon-btn" id="favToggle" title="Favorites" aria-label="Show favorites">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow-line"><span class="dot"></span>2,400+ wallpapers, updated weekly</div>
+        <h1>Wallpapers that make your screen feel <em>quieter</em>.</h1>
+        <p>Free, high-resolution wallpapers for phones and desktops — hand-picked across nature, dark, minimal and space collections. No account, no watermark, no catch.</p>
+        <div class="hero-actions">
+          <a href="#gallery" class="btn-primary">Browse the gallery</a>
+          <a href="#features" class="btn-ghost">How it works</a>
+        </div>
+        <div class="hero-stats">
+          <div><span class="num">2,400+</span><span class="lbl">Wallpapers</span></div>
+          <div><span class="num">9</span><span class="lbl">Collections</span></div>
+          <div><span class="num">4K</span><span class="lbl">Max resolution</span></div>
+        </div>
+      </div>
+      <div class="collage">
+        <img class="c1" src="https://picsum.photos/seed/driftmain1/700/900" alt="Featured wallpaper preview" loading="lazy">
+        <img class="c2" src="https://picsum.photos/seed/driftmain2/600/500" alt="Featured wallpaper preview" loading="lazy">
+        <img class="c3" src="https://picsum.photos/seed/driftmain3/450/450" alt="Featured wallpaper preview" loading="lazy">
+        <div class="collage-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v13m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+          Free download
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cat-rail">
+    <div class="wrap">
+      <div class="cat-scroll" id="catRail">
+        <button class="chip active" data-cat="all">All</button>
+        <button class="chip" data-cat="nature">Nature</button>
+        <button class="chip" data-cat="minimal">Minimal</button>
+        <button class="chip" data-cat="dark">Dark</button>
+        <button class="chip" data-cat="abstract">Abstract</button>
+        <button class="chip" data-cat="space">Space</button>
+        <button class="chip" data-cat="city">City</button>
+        <button class="chip" data-cat="architecture">Architecture</button>
+        <button class="chip" data-cat="texture">Texture</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="gallery-section wrap" id="gallery">
+    <div class="section-head">
+      <div>
+        <h2>Fresh from the collection</h2>
+        <p>Tap any wallpaper to preview it full-screen before downloading.</p>
+      </div>
+      <div class="result-count" id="resultCount"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="empty-state" id="emptyState">
+      <h3>Nothing here yet</h3>
+      <p>Try a different category or search term.</p>
+    </div>
+    <div class="load-more-wrap">
+      <button class="btn-load" id="loadMoreBtn">Load more wallpapers</button>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="wrap features-grid">
+      <div class="feature">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13m0 0-4-4m4 4 4-4M5 21h14"/></svg></div>
+        <h3>Always free</h3>
+        <p>Every wallpaper is free to download in full resolution — no premium tier, no watermark.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <h3>Built for every screen</h3>
+        <p>Wallpapers are sized and cropped to look sharp on phones, tablets and widescreen desktops.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg></div>
+        <h3>Save favorites</h3>
+        <p>Heart the ones you love and find them again instantly, even after you close the tab.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Fast, honest search</h3>
+        <p>Filter by mood or collection and find a wallpaper in seconds, not scrolling forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2>New drops every week.</h2>
+        <p>We add fresh wallpapers from each collection regularly — bookmark Driftshade to keep your screen feeling new.</p>
+      </div>
+      <a href="#gallery" class="btn-primary">Explore the gallery</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo"><span class="logo-mark"></span>Driftshade</a>
+        <p>A small, free library of calm, high-resolution wallpapers for phones and desktops.</p>
+        <div class="social-row">
+          <a href="#" class="icon-btn" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" class="icon-btn" aria-label="Pinterest"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 17c1-3 1.5-6 2-9m1 4a3 3 0 1 0 3-4"/></svg></a>
+          <a href="#" class="icon-btn" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <a href="#gallery">Nature</a>
+        <a href="#gallery">Minimal</a>
+        <a href="#gallery">Dark</a>
+        <a href="#gallery">Space</a>
+      </div>
+      <div class="footer-col">
+        <h4>Driftshade</h4>
+        <a href="#features">How it works</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#top">Favorites</a>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <a href="#">Licensing</a>
+        <a href="#">Contact</a>
+        <a href="#">Report an image</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Driftshade. Wallpapers for personal use.</span>
+      <span>Made for people who like a quiet screen.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-inner">
+    <div class="lb-img-wrap">
+      <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+      <button class="lb-nav prev" id="lbPrev" aria-label="Previous">‹</button>
+      <button class="lb-nav next" id="lbNext" aria-label="Next">›</button>
+      <img id="lbImg" src="" alt="">
+    </div>
+    <div class="lb-bar">
+      <div class="lb-info">
+        <h3 id="lbTitle"></h3>
+        <span id="lbMeta"></span>
+      </div>
+      <div class="lb-actions">
+        <button class="btn-ghost" id="lbFav">Save to favorites</button>
+        <a class="btn-primary" id="lbDownload" download>Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const CATS = ["nature","minimal","dark","abstract","space","city","architecture","texture"];
+  const TITLES = {
+    nature:["Forest Mist","Coastal Dawn","Quiet Valley","Mountain Line","Pine Hush"],
+    minimal:["Soft Field","Paper Grain","Bare Horizon","Clean Slate","Still Room"],
+    dark:["Night Fold","Deep Charcoal","Low Light","Ink Room","After Hours"],
+    abstract:["Flow Study","Colour Drift","Loose Form","Split Light","Grain Wave"],
+    space:["Nebula Drift","Far Orbit","Star Field","Quiet Galaxy","Night Sky"],
+    city:["Grid Lights","Street Level","Skyline Fade","Concrete Line","Rain Window"],
+    architecture:["Bare Structure","Stair Study","Shadow Wall","Facade Line","Glass Block"],
+    texture:["Paper Fold","Woven Grain","Stone Surface","Linen Study","Rust Pattern"]
+  };
+  const RES = ["4K · 3840×2160","2K · 2560×1440","HD · 1920×1080","4K · 3840×2160"];
+
+  let items = [];
+  let seedCounter = 1;
+  let shown = 0;
+  const PAGE_SIZE = 12;
+  let activeCat = "all";
+  let searchTerm = "";
+  let favorites = JSON.parse(localStorage.getItem("driftshade_favs") || "[]");
+  let showFavsOnly = false;
+  let lbIndex = 0;
+  let currentList = [];
+
+  function makeItem(){
+    const cat = CATS[seedCounter % CATS.length];
+    const titlePool = TITLES[cat];
+    const title = titlePool[seedCounter % titlePool.length];
+    const res = RES[seedCounter % RES.length];
+    const id = "ds" + seedCounter;
+    const item = {
+      id, cat, title, res,
+      img: `https://picsum.photos/seed/${id}/900/1300`
+    };
+    seedCounter++;
+    return item;
+  }
+
+  for(let i=0;i<24;i++){ items.push(makeItem()); }
+
+  const grid = document.getElementById("grid");
+  const emptyState = document.getElementById("emptyState");
+  const resultCount = document.getElementById("resultCount");
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+  function getFiltered(){
+    return items.filter(it=>{
+      const matchCat = activeCat === "all" || it.cat === activeCat;
+      const matchSearch = !searchTerm || it.title.toLowerCase().includes(searchTerm) || it.cat.includes(searchTerm);
+      const matchFav = !showFavsOnly || favorites.includes(it.id);
+      return matchCat && matchSearch && matchFav;
+    });
+  }
+
+  function cardHTML(it){
+    const isFav = favorites.includes(it.id);
+    return `
+      <div class="card" data-id="${it.id}">
+        <div class="thumb-wrap">
+          <span class="res-badge">${it.res.split(" · ")[0]}</span>
+          <button class="fav-btn ${isFav?'active':''}" data-fav="${it.id}" aria-label="Save favorite">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="${isFav?'currentColor':'none'}" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+          </button>
+          <img src="${it.img}" alt="${it.title} wallpaper" loading="lazy">
+          <div class="overlay">
+            <div class="card-title">${it.title}</div>
+            <div class="card-meta">
+              <span>${it.res}</span>
+              <span class="dl-mini" data-dl="${it.id}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v13m0 0-4-4m4 4 4-4M5 21h14"/></svg></span>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function render(reset){
+    const filtered = getFiltered();
+    currentList = filtered;
+    if(reset){ shown = 0; grid.innerHTML = ""; }
+    const next = filtered.slice(shown, shown + PAGE_SIZE);
+    grid.insertAdjacentHTML("beforeend", next.map(cardHTML).join(""));
+    shown += next.length;
+
+    resultCount.textContent = filtered.length + (filtered.length === 1 ? " wallpaper" : " wallpapers");
+    emptyState.classList.toggle("show", filtered.length === 0);
+    loadMoreBtn.style.display = shown >= filtered.length ? "none" : "inline-block";
+  }
+
+  render(true);
+
+  document.getElementById("catRail").addEventListener("click", e=>{
+    const btn = e.target.closest(".chip");
+    if(!btn) return;
+    document.querySelectorAll(".chip").forEach(c=>c.classList.remove("active"));
+    btn.classList.add("active");
+    activeCat = btn.dataset.cat;
+    render(true);
+  });
+
+  document.getElementById("searchInput").addEventListener("input", e=>{
+    searchTerm = e.target.value.trim().toLowerCase();
+    render(true);
+  });
+
+  loadMoreBtn.addEventListener("click", ()=>{
+    for(let i=0;i<8;i++){ items.push(makeItem()); }
+    render(false);
+  });
+
+  document.getElementById("favToggle").addEventListener("click", ()=>{
+    showFavsOnly = !showFavsOnly;
+    document.getElementById("favToggle").style.color = showFavsOnly ? "var(--accent)" : "";
+    render(true);
+  });
+
+  function toggleFav(id){
+    const idx = favorites.indexOf(id);
+    if(idx > -1) favorites.splice(idx,1); else favorites.push(id);
+    localStorage.setItem("driftshade_favs", JSON.stringify(favorites));
+  }
+
+  grid.addEventListener("click", e=>{
+    const favBtn = e.target.closest("[data-fav]");
+    if(favBtn){
+      e.stopPropagation();
+      toggleFav(favBtn.dataset.fav);
+      favBtn.classList.toggle("active");
+      const svg = favBtn.querySelector("svg");
+      svg.setAttribute("fill", favBtn.classList.contains("active") ? "currentColor" : "none");
+      return;
+    }
+    const card = e.target.closest(".card");
+    if(card){
+      const id = card.dataset.id;
+      const idx = currentList.findIndex(it=>it.id===id);
+      if(idx > -1) openLightbox(idx);
+    }
+  });
+
+  /* Lightbox */
+  const lightbox = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lbImg");
+  const lbTitle = document.getElementById("lbTitle");
+  const lbMeta = document.getElementById("lbMeta");
+  const lbDownload = document.getElementById("lbDownload");
+  const lbFav = document.getElementById("lbFav");
+
+  function openLightbox(idx){
+    lbIndex = idx;
+    updateLightbox();
+    lightbox.classList.add("show");
+  }
+  function updateLightbox(){
+    const it = currentList[lbIndex];
+    if(!it) return;
+    lbImg.src = it.img;
+    lbImg.alt = it.title;
+    lbTitle.textContent = it.title;
+    lbMeta.textContent = it.res + " · " + it.cat[0].toUpperCase() + it.cat.slice(1);
+    lbDownload.href = it.img;
+    lbDownload.setAttribute("download", it.title.replace(/\s+/g,"-").toLowerCase() + ".jpg");
+    lbFav.textContent = favorites.includes(it.id) ? "Saved to favorites" : "Save to favorites";
+  }
+  document.getElementById("lbClose").addEventListener("click", ()=> lightbox.classList.remove("show"));
+  lightbox.addEventListener("click", e=>{ if(e.target === lightbox) lightbox.classList.remove("show"); });
+  document.getElementById("lbPrev").addEventListener("click", ()=>{
+    lbIndex = (lbIndex - 1 + currentList.length) % currentList.length; updateLightbox();
+  });
+  document.getElementById("lbNext").addEventListener("click", ()=>{
+    lbIndex = (lbIndex + 1) % currentList.length; updateLightbox();
+  });
+  lbFav.addEventListener("click", ()=>{
+    const it = currentList[lbIndex];
+    toggleFav(it.id);
+    updateLightbox();
+    render(true);
+  });
+  document.addEventListener("keydown", e=>{
+    if(!lightbox.classList.contains("show")) return;
+    if(e.key === "Escape") lightbox.classList.remove("show");
+    if(e.key === "ArrowLeft") document.getElementById("lbPrev").click();
+    if(e.key === "ArrowRight") document.getElementById("lbNext").click();
+  });
+})();
+</script>
+</body>
+</html>
